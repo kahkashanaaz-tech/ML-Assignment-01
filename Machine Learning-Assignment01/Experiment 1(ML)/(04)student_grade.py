@@ -1,6 +1,5 @@
 import pandas as pd
 
-# Create DataFrame
 data = {
     "Student Name": ["Amit", "Riya", "Sourav", "Neha", "Rahul"],
     "Roll Number": [101, 102, 103, 104, 105],
@@ -9,8 +8,6 @@ data = {
 }
 
 df = pd.DataFrame(data)
-
-# Function to calculate Grade
 def calculate_grade(marks):
     if marks >= 90:
         return "A"
@@ -23,9 +20,7 @@ def calculate_grade(marks):
     else:
         return "F"
 
-# Add Grade column dynamically
 df["Grade"] = df["Marks"].apply(calculate_grade)
 
-# Display DataFrame
 print("Student Records with Grade:")
 print(df)
